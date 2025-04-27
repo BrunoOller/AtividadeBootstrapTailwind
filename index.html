@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOVIELAND - Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/color.css">
+    <link rel="shortcut icon" href="./img/favicon.svg" type="image/x-icon">
+
+    <style>
+        body {
+            background: var(--cor-fundo);
+        }
+
+        .text-shadow,
+        .b-shadow {
+            text-shadow: 0 0 10px #0e0e0e;
+        }
+
+        nav {
+            background: var(--cor-nav-cards);
+        }
+
+        .accordion-item {
+            border: none;
+        }
+
+        nav .dropdown .dropdown-menu {
+            padding: 10px;
+        }
+
+        nav .dropdown a:hover {
+            background-color: #1b1b1b;
+        }
+
+        #lancamentos #cards .card {
+            background: var(--cor-nav-cards);
+            color: var(--cor-textos);
+
+            & p {
+                color: #e4e4e4;
+            }
+        }
+
+        #alert-deadpool {
+            background: #f0b373;
+            border: 1px solid #ec8517;
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <!-- Nome do site + Frase pequena -->
+            <div class="d-flex align-items-center">
+                <a class="navbar-brand mb-0 h1" href="index.html">🎬 MovieLand</a>
+                <span class="badge text-bg-warning">Explore o universo dos filmes!</span>
+            </div>
+
+            <!-- Botão do hamburguer no mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Itens do menu (todos para a direita) -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#img-home">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#lancamentos">Filmes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faq">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato">Contato</a>
+                    </li>
+
+                    <!-- Dropdown separado para outras páginas -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-warning" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Mais
+                        </a>
+                        <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item text-light" href="outros-componentes.html">Outros
+                                    Componentes</a></li>
+                            <li><a class="dropdown-item text-light" href="tailwind.html">Versão Tailwind</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="mt-5" id="img-home">
+        <div class="container px-5">
+            <p class="h4 text-light">Destaques da semana <span class="badge text-bg-warning">Novos</span></p>
+            <div id="carouselExampleCaptions" class="carousel slide mt-2" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="7000">
+                        <img src="./img/banners/1.png" class="d-block w-100 b-shadow rounded" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h4 class="text-shadow">Deadpool & Wolverine</h4>
+                            <p class="text-shadow">Os anti-heróis mais amados estão de volta!</p>
+                            <div id="alert-deadpool" class="alert text-center" role="alert">
+                                🎬 Não perca! Estreia exclusiva de Deadpool & Wolverine nesta sexta-feira!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="4500">
+                        <img src="./img/banners/2.png" class="d-block w-100 b-shadow rounded" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h4 class="text-shadow">Oppenheimer</h4>
+                            <p class="text-shadow">Uma explosão de emoções em cartaz!</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="4500">
+                        <img src="./img/banners/3.png" class="d-block w-100 b-shadow rounded" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h4 class="text-shadow">Duna: Parte 2</h4>
+                            <p class="text-shadow">Uma jornada épica pelo deserto de Arrakis.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-5 py-4" id="lancamentos">
+        <div class="container px-5">
+            <p class="h4 text-light ms-3">Top Filmes do Momento <span class="badge text-bg-warning">Mais
+                    assistidos</span></p>
+            <div class="d-flex gap-3 justify-content-center flex-wrap" id="cards">
+                <div class="card" style="width: 18rem;">
+                    <img src="./img/capas/1.png" class="card-img-top" alt="...">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Deadpool & Wolverine</h5>
+                        <p class="card-text">Os mercenários mais imprevisíveis do universo estão de volta em uma missão
+                            caótica (e sangrenta).</p>
+                        <a href="https://youtu.be/dEbe0rS4Z2A?si=dmrRMmEaXdB0lL1d" target="_blank" class="btn btn-dark mt-auto">Assistir Trailer</a>
+                        <button type="button" class="btn btn-danger mt-1" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            Saiba mais
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content bg-dark text-light">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Mais sobre Deadpool &
+                                            Wolverine
+                                        </h1>
+                                    </div>
+                                    <div class="modal-body">
+                                        Deadpool e Wolverine retornam juntos em uma missão épica que mistura ação,
+                                        comédia e muita irreverência. O filme traz uma dinâmica única entre os dois
+                                        personagens, enquanto enfrentam ameaças ainda mais perigosas e caóticas.
+                                        Prepare-se para cenas de ação intensas e piadas de tirar o fôlego.
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-light"
+                                            data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="./img/capas/2.png" class="card-img-top" alt="...">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Oppenheimer</h5>
+                        <p class="card-text">A história do homem que mudou o mundo para sempre. Conheça os dilemas, a
+                            genialidade e o peso de criar o poder destrutivo supremo.</p>
+                        <a href="https://youtu.be/F3OxA9Cz17A?si=5tMRHSq98n6VGVhw" target="_blank" class="btn btn-dark mt-auto">Assistir Trailer</a>
+                        <button type="button" class="btn btn-danger mt-1" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            Saiba mais
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content bg-dark text-light">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Mais sobre Oppenheimer
+                                        </h1>
+                                    </div>
+                                    <div class="modal-body">
+                                        Oppenheimer conta a história de J. Robert Oppenheimer, o homem responsável pela
+                                        criação da bomba atômica. O filme explora os dilemas éticos e as consequências
+                                        devastadoras dessa invenção, ao mesmo tempo em que revela a complexidade do
+                                        personagem e suas relações durante a Segunda Guerra Mundial.
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-light"
+                                            data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="./img/capas/3.png" class="card-img-top" alt="...">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Interestelar</h5>
+                        <p class="card-text">Uma viagem épica através do espaço e do tempo para salvar a humanidade.
+                            Quando a Terra morre, a esperança vem das estrelas.</p>
+                        <a href="https://youtu.be/mbbPSq63yuM?si=Z0kBbe7y9mst8V_y" target="_blank" class="btn btn-dark mt-auto">Assistir Trailer</a>
+                        <button type="button" class="btn btn-danger mt-1" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            Saiba mais
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content bg-dark text-light">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Mais sobre Interestelar
+                                        </h1>
+                                    </div>
+                                    <div class="modal-body">
+                                        Interestelar é uma jornada épica que combina ficção científica com questões
+                                        filosóficas profundas. Quando a Terra se aproxima da extinção, um grupo de
+                                        exploradores tenta salvar a humanidade viajando através de um buraco de minhoca
+                                        para encontrar um novo lar para a raça humana.
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-light"
+                                            data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="./img/capas/4.png" class="card-img-top" alt="...">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Duna: Parte 2</h5>
+                        <p class="card-text">Prepare-se para uma experiência cinematográfica intensa no deserto mais
+                            perigoso do universo.</p>
+                        <a href="https://youtu.be/RK1xTZi9wb4?si=UyosRbowa92fW2u2" target="_blank" class="btn btn-dark mt-auto">Assistir Trailer</a>
+                        <button type="button" class="btn btn-danger mt-1" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            Saiba mais
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content bg-dark text-light">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Mais sobre Duna: Parte 2
+                                        </h1>
+                                    </div>
+                                    <div class="modal-body">
+                                        Duna: Parte 2 é a continuação da adaptação épica de Denis Villeneuve. O filme
+                                        mergulha ainda mais na jornada de Paul Atreides e seus aliados Fremen na luta
+                                        pelo controle do planeta Arrakis.
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-light"
+                                            data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-2" id="faq">
+        <div class="container p-5">
+            <p class="h4 text-light ms-3">Perguntas Frequêntes <span class="badge text-bg-warning">FAQ</span></p>
+            <div class="accordion text-light mt-2" id="accordionExample">
+                <div class="accordion-item bg-dark">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button bg-dark text-light" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            1. Como escolher um filme para assistir?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-light">
+                            Considere seu humor, gênero favorito e recomendações de amigos ou críticos. Em MovieLand,
+                            damos sugestões atualizadas!
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item bg-dark">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed bg-dark text-light" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            2. Os filmes aqui são atualizados com que frequência?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-light">
+                            Nossos destaques e críticas são atualizados semanalmente para manter você por dentro das
+                            novidades.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item bg-dark">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed bg-dark text-light" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            3. Posso sugerir um filme para análise?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-light">
+                            Claro! Acesse a seção 'Contato' e mande sua sugestão para nossa equipe!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contato">
+        <div class="container mt-3">
+
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
