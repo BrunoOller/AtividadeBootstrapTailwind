@@ -1,11 +1,192 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Outros componentes</title>
-</head>
-<body>
     
+    <!-- Título do site -->
+    <title>MOVIELAND - Outros componentes</title>
+
+    <!-- Link Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    
+    <!-- Links CSS -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/color.css">
+
+    <!-- Link Favicon -->
+    <link rel="shortcut icon" href="./img/favicon.svg" type="image/x-icon">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <a class="navbar-brand mb-0 h1" href="index.html">🎬 Movie<span class="text-warning">Land</span></a>
+                <small class="text-light text-bold">Explore o universo dos filmes!</small>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Itens do menu (todos para a direita) -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#img-home">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#s-toast">Descer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-warning" href="outros-componentes.html">Outros
+                            Componentes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-warning" href="tailwind.html">Tailwind</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="content" class="container rounded px-4 py-2 mt-4">
+        <div class="p-2 bg-dark rounded">
+            <h3 class="text-light">Componentes não utilizados</h3>
+            <p id="desc">Componentes não utilizados devido a não se encaixarem na proposta do site. <br> Tanto por alguns demandarem mais páginas, quantos por outros realmente não valerem a pena ou não se encaixarem.</p>
+        </div>
+
+        <section id="s-breadcrumb" class="mt-4">
+            <h5 class="ms-2 text-light">Breadcrumb</h5>
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb p-2">
+                    <li class="breadcrumb-item"><a class="text-warning" href="#">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Library</li>
+                </ol>
+            </nav>
+        </section>
+
+        <section id="s-pagination" class="mt-4 p-2 bg-dark rounded">
+            <h5 class="ms-2 text-light">Pagination</h5>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination bg-dark">
+                    <li class="page-item"><a class="page-link text-light bg-dark border-secondary" href="#">Previous</a>
+                    </li>
+                    <li class="page-item"><a class="page-link text-light bg-dark border-secondary" href="#">1</a>
+                    </li>
+                    <li class="page-item"><a class="page-link text-light bg-dark border-secondary" href="#">2</a>
+                    </li>
+                    <li class="page-item"><a class="page-link text-light bg-dark border-secondary" href="#">3</a>
+                    </li>
+                    <li class="page-item"><a class="page-link text-light bg-dark border-secondary" href="#">Next</a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+
+        <section id="s-btn-group" class="mt-4">
+            <h5 class="ms-2 text-light">Button Group</h5>
+            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                <button type="button" class="btn btn-danger">Left</button>
+                <button type="button" class="btn btn-warning">Middle</button>
+                <button type="button" class="btn btn-success">Right</button>
+            </div>
+        </section>
+
+        <section id="s-list-group" class="mt-4">
+            <h5 class="ms-2 text-light">List Group</h5>
+            <ul class="list-group">
+                <li class="list-group-item bg-dark text-light border-secondary">An item</li>
+                <li class="list-group-item bg-dark text-light border-secondary">A second item</li>
+                <li class="list-group-item bg-dark text-light border-secondary">A third item</li>
+                <li class="list-group-item bg-dark text-light border-secondary">A fourth item</li>
+                <li class="list-group-item bg-dark text-light border-secondary">And a fifth one</li>
+            </ul>
+        </section>
+
+        <section id="s-offcanvas" class="mt-4">
+            <h5 class="ms-2 text-light">Offcanvas</h5>
+            <a class="btn btn-warning" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                aria-controls="offcanvasExample">
+                Offcanvas
+            </a>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header bg-dark text-light">
+                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body bg-dark  text-light">
+                    <div>
+                        Some text as placeholder. In real life you can have the elements you have chosen. Like,
+                        text,
+                        images, lists, etc.
+                    </div>
+                    <div class="dropdown mt-3">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            Dropdown button
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="s-popovers" class="mt-4">
+            <h5 class="ms-2 text-light">Popover</h5>
+            <button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" data-bs-title="Popover title"
+                data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle
+                popover</button>
+        </section>
+
+        <section id="s-progress" class="mt-4">
+            <h5 class="ms-2 text-light">Progress</h5>
+            <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25"
+                aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" style="width: 25%">25%</div>
+            </div>
+        </section>
+
+        <section id="s-spinners" class="mt-4">
+            <h5 class="ms-2 text-light">Spinner</h5>
+            <div class="spinner-border text-warning" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </section>
+
+        <section id="s-toast" class="mt-4">
+            <h5 class="ms-2 text-light">Toast</h5>
+            <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
+
+            <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                        <strong class="me-auto">Bootstrap</strong>
+                        <small>11 mins ago</small>
+                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                    <div class="toast-body">
+                        Hello, world! This is a toast message.
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Link do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+    <script src="./js/script.js"></script>
 </body>
+
 </html>

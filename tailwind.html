@@ -1,12 +1,127 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurante Tailwind</title>
+
+    <!-- Título do site -->
+    <title>MOVIELAND - Tailwind</title>
+
+    <!-- Link do Tailwind -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/color.css">
+    <link rel="stylesheet" href="./css/styleTailwind.css">
+
+    <!-- Link Favicon -->
+    <link rel="shortcut icon" href="./img/favicon.svg" type="image/x-icon">
+
+    <!-- Link Fontawesome -->
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" rel="stylesheet">
 </head>
+
 <body>
-    
+    <!-- Navbar -->
+    <nav id="navbar" class="w-full h-14 flex justify-center items-center">
+
+        <!-- Conteúdo da Navbar -->
+        <div class="container w-[70%] flex justify-between">
+
+            <!-- Parte da Logo -->
+            <div class="flex gap-4 items-center">
+                <a href="." class="text-[20px] font-medium text-white">🎬 Movie<span
+                        class="text-yellow-400">Land</span></a>
+                <small class="text-white text-[14px]">Explore o universo dos filmes!</small>
+            </div>
+
+            <!-- Parte da Navegação -->
+            <div class="flex items-center text-white">
+                <ul class="flex gap-4 text-[16px]">
+                    <li><a href="#content">Cards</a></li>
+                    <li><a class="text-yellow-400" href="index.html">Bootstrap</a></li>
+                    <li><a class="text-yellow-400" href="outros-componentes.html">Outros Componentes</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main id="content" class="w-full h-[75vh] flex justify-center items-center">
+        <!-- Cards -->
+        <div class="flex gap-4" id="cards">
+
+            <!-- Card 1 -->
+            <div class="w-[288px] h-[554px] flex flex-col items-center gap-2 rounded" id="card">
+                <img class="rounded w-[288px] h-[288px]" src="./img/capas/1.png" alt="">
+                <div class="w-full h-full flex flex-col justify-between gap-3" id="c-content">
+                    <div class="flex-col justify-start" id="c-textos">
+                        <h2 class="text-white text-[20px] mb-[8px] font-medium">Deadpool & Wolverine</h2>
+                        <p class="text-[16px] mb-[16px]">Os mercenários mais imprevisíveis do universo estão de volta em uma
+                            missão
+                            caótica (e sangrenta).</p>
+                    </div>
+                    <a class="w-[100%] h-[40px] rounded text-white flex justify-center items-center gap-1.5" href="https://youtu.be/dEbe0rS4Z2A?si=dmrRMmEaXdB0lL1d" target="_blank">Assistir trailer <i class="fas fa-video"></i></a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="w-[288px] h-[554px] flex flex-col items-center gap-2 rounded" id="card">
+                <img class="rounded w-[288px] h-[288px]" src="./img/capas/2.png" alt="">
+                <div class="w-full h-full flex flex-col justify-between gap-3" id="c-content">
+                    <div class="flex-col justify-start" id="c-textos">
+                        <h2 class="text-white text-[20px] mb-[8px] font-medium">Oppenheimer</h2>
+                        <p class="text-[16px] mb-[16px]">A história do homem que mudou o mundo para sempre. Conheça os dilemas, a
+                            genialidade e o peso de criar o poder destrutivo supremo.</p>
+                    </div>
+                    <a class="w-[100%] h-[40px] rounded text-white flex justify-center items-center gap-1.5" href="https://youtu.be/F3OxA9Cz17A?si=5tMRHSq98n6VGVhw" target="_blank">Assistir trailer <i class="fas fa-video"></i></a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="w-[288px] h-[554px] flex flex-col items-center gap-2 rounded" id="card">
+                <img class="rounded w-[288px] h-[288px]" src="./img/capas/3.png" alt="">
+                <div class="w-full h-full flex flex-col justify-between gap-3" id="c-content">
+                    <div id="c-textos">
+                        <h2 class="text-white text-[20px] mb-[8px] font-medium">Interestelar</h2>
+                        <p class="text-[16px] mb-[16px]">Uma viagem épica através do espaço e do tempo para salvar a humanidade.
+                            Quando a Terra morre, a esperança vem das estrelas.</p>
+                    </div>
+                    <a class="w-[100%] h-[40px] rounded text-white flex justify-center items-center gap-1.5" href="https://youtu.be/mbbPSq63yuM?si=Z0kBbe7y9mst8V_y" target="_blank">Assistir trailer <i class="fas fa-video"></i></a>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="w-[288px] h-[554px] flex flex-col items-center gap-2 rounded" id="card">
+                <img class="rounded w-[288px] h-[288px]" src="./img/capas/4.png" alt="">
+                <div class="w-full h-full flex flex-col justify-between gap-3" id="c-content">
+                    <div id="c-textos">
+                        <h2 class="text-white text-[20px] mb-[8px] font-medium">Duna: Parte 2</h2>
+                        <p class="text-[16px] mb-[16px]">Prepare-se para uma experiência cinematográfica intensa no deserto mais
+                            perigoso do universo.</p>
+                    </div>
+                    <a class="w-[100%] h-[40px] rounded text-white flex justify-center items-center gap-1.5" href="https://youtu.be/RK1xTZi9wb4?si=UyosRbowa92fW2u2" target="_blank">Assistir trailer <i class="fas fa-video"></i></a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Rodapé do site -->
+    <footer class="text-white w-full h-auto flex justify-center items-center flex-col" id="rodape">
+        
+        <div class="container">
+            <!-- Informações do site -->
+            <div class="text-center">
+                <h1 class="text-[20px] font-medium">Movie<span class="text-yellow-400">Land</span></h1>
+                <p>O melhor lugar para descobrir, comentar e se apaixonar por filmes!</p>
+                <p class="small">&copy;2025 MovieLand. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Link Fontawesome -->
+    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/js/all.min.js"></script>
 </body>
+
 </html>

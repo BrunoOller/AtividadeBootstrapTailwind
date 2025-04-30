@@ -1,0 +1,52 @@
+#navbar {
+    background: var(--cor-nav-cards);
+
+    & span & ul li a {
+        color: #ffffff8c;
+        transition: color .15s ease-out;
+
+        &:hover {
+            color: #d6d6d6;
+            transition: color .15s ease-in;
+        }
+    }
+}
+
+#card {
+    background: #151515;
+
+    & #c-content {
+        padding: 16px;
+
+        & #c-textos {
+
+            & h2 {
+                margin-bottom: 8px;
+            }
+
+            & p {
+                margin-bottom: 16px;
+                color: #dbdbdb;
+            }
+        }
+
+        & a {
+            background: #212529;
+            transition: background .12s ease-out;
+
+            &:hover {
+                background: #353b42;
+                transition: background .12s ease-in;
+            }
+        }
+    }
+}
+
+#rodape {
+    background: #111111;
+    padding: 44px 0;
+
+    & .small {
+        margin-top: 15px;
+    }
+}
